@@ -1,0 +1,14 @@
+.hero{
+    height:17rem;
+}
+.btn {
+    border-radius:var(--border-radius1);
+    color: var(--secondry-color);
+    font-size: var(--size-1);
+    background: var(--red-colorl1);
+    padding: 10px 20px 10px 20px;
+    text-decoration: none;
+  }
+  .btn:hover {
+    background: var(--red-colord2);
+  }
