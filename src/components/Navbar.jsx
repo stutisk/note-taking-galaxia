@@ -1,7 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
 
-export function Navbar() {
+const Navbar=() =>{
   return (
     <>
       <div className="container m-a">
@@ -27,3 +27,4 @@ export function Navbar() {
     </>
   );
 };
+export {Navbar}

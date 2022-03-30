@@ -3,9 +3,7 @@ import {Navbar} from "../components/Navbar";
 import Hero from  "../assests/hero.svg"
 import styles from "./Home.module.css";
 import { Link } from "react-router-dom";
-
-
-export function Home() {
+const  Home= () =>{
   return (
     <div>
     <Navbar />
@@ -18,7 +16,8 @@ export function Home() {
             </div>
             <div className=" sub-head head m-a">
                 Every big step start with small step.
-                <br></br>
+                </div>
+                <div className=" sub-head head m-a">
                 Note your first idea and start your journey
             </div>
             <div className=" head m-a">
@@ -28,3 +27,4 @@ export function Home() {
   </div>
   );
 }
+export {Home};
