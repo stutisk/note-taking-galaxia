@@ -5,7 +5,7 @@ import styles from "./Home.module.css";
 import { Link } from "react-router-dom";
 
 
-export function Home() {
+const Home =() =>{
   return (
     <div>
     <Navbar />
@@ -22,9 +22,10 @@ export function Home() {
                 Note your first idea and start your journey
             </div>
             <div className=" head m-a">
-            <button className={styles.btn}><Link className={styles.btn} to="https://github.com/stutisk">Join Now</Link></button>
+            <button className={styles.btn}><Link className={styles.btn} to="./MainPage">Join Now</Link></button>
             </div>    
         </main>
   </div>
   );
 }
+export {Home}

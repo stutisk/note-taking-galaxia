@@ -1,13 +1,15 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import styles from "../pages/Home.module.css";
 
-export function Navbar() {
+const Navbar=()=> {
   return (
     <>
       <div className="container m-a">
         <nav className="nav-bar ">
           <div className="left-side">
-          <Link to="/">GALA<span className="span">X!A</span></Link>
+          <Link to="/"> GALA<span class="span">X!A</span></Link>
+
           </div>
           <div className="right-side">
             <ul>
@@ -27,3 +29,5 @@ export function Navbar() {
     </>
   );
 };
+
+export {Navbar};
