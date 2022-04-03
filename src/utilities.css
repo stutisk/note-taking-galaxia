@@ -1,0 +1,66 @@
+:root {
+  --red-colorl1: #ff6584;
+  --red-colord2: #f74165;
+  --input-box-color:#f0f2f4;
+  --black-color:rgb(6, 6, 6);
+  --white-color:#e4f1ef;
+  --aside-hover:#e4f1ef;
+  --note-bg-color:#cccccc3c;
+  --border-radius1: 4px;
+  --border-radius-aside:0 25px 25px 0;
+  /* font-family: "Google Sans", Roboto, Arial, sans-serif; */
+}
+
+.padding1 {
+  padding: 10px 1.25rem ;
+}
+.p-r1 {
+  padding-right: 1rem;
+}
+.marginT {
+  margin: 2rem;
+}
+.m-R {
+  margin-right: 2rem;
+}
+
+/* grid */
+.grid-container {
+  display: grid;
+  width: 100%;
+  grid-gap: 2px;
+  grid-template-columns: 20% 70%;
+  grid-template-rows: 100%;
+  margin-top: 5rem;
+}
+/* icons */
+.icon-color {
+  color:var(--main-Cta-color);
+  font-weight: 800;
+}
+
+.headings {
+  color:var(--main-Cta-color);
+  font-size: var(--size-1);
+  padding: 2rem;
+  letter-spacing: 0.01785714em;
+  /* font-family: "Google Sans", Roboto, Arial, sans-serif; */
+  font-size: var(--size-1);
+  line-height: 1.25rem;
+  padding: 1rem;
+}
+/* flex */
+.flex-column-start {
+  display: flex;
+  justify-content: flex-start;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+.flex-column-end {
+  display: flex;
+  justify-content: flex-end;
+  flex-wrap: wrap;
+}
+.pointer {
+  cursor: pointer;
+}
