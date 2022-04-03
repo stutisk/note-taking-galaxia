@@ -1,7 +1,7 @@
 import React from "react";
 import {Navbar} from "../../components/Navbar/Navbar";
 import Hero from  "../../assests/hero.svg"
-import styles from "./Home.module.css";
+import styles from "../Home/Home.module.css";
 import { Link } from "react-router-dom";
 
 
@@ -22,7 +22,7 @@ const Home =() =>{
                 Note your first idea and start your journey
             </div>
             <div className=" head m-a">
-            <button className={styles.btn}><Link className={styles.btn} to="./MainPage">Join Now</Link></button>
+            <button className={` padding1 ${styles.btn1}`}><Link className={`padding1 ${styles.btn1}`} to="./MainPage">Join Now</Link></button>
             </div>    
         </main>
   </div>

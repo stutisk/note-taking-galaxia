@@ -6,15 +6,13 @@
   --white-color:#e4f1ef;
   --aside-hover:#e4f1ef;
   --note-bg-color:#cccccc3c;
-
-
-
   --border-radius1: 4px;
   --border-radius-aside:0 25px 25px 0;
+  /* font-family: "Google Sans", Roboto, Arial, sans-serif; */
 }
 
 .padding1 {
-  padding: 10px 20px 10px 20px;
+  padding: 10px 1.25rem ;
 }
 .p-r1 {
   padding-right: 1rem;
@@ -46,7 +44,7 @@
   font-size: var(--size-1);
   padding: 2rem;
   letter-spacing: 0.01785714em;
-  font-family: "Google Sans", Roboto, Arial, sans-serif;
+  /* font-family: "Google Sans", Roboto, Arial, sans-serif; */
   font-size: var(--size-1);
   line-height: 1.25rem;
   padding: 1rem;
