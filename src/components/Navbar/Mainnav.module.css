@@ -1,0 +1,16 @@
+.searchbar input {
+    min-width: 30rem;
+    height: 3rem;
+    border: 2px solid transparent;
+    border-radius: var(--border-radius);
+    background: var(--input-box-color);
+    display: flex;
+  }
+  .btn {
+    border-radius: var(--border-radius1);
+    color: var(--secondry-color);
+    font-size: var(--size-1);
+    background: var(--red-colord2);
+    padding: 10px 20px 10px 20px;
+    text-decoration: none;
+  }
