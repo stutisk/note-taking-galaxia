@@ -2,6 +2,8 @@ import React from "react";
 import { Mainnav } from "../../components/Navbar/Mainnav";
 import { Aside } from "../../components/Aside/Aside";
 import { Notes } from "../../components/Notes/Notes";
+import RichText from "../../components/RichText";
+
 
 const MainPage = () => {
   return (
@@ -12,12 +14,13 @@ const MainPage = () => {
           <Aside />
         </div>
         <div className="flex-column-start">
+          {/* <RichText /> */}
           <Notes />
           <Notes />
           <Notes />
         </div>
       </div>
     </div>
-  );
-};
+    )
+  };
 export { MainPage };

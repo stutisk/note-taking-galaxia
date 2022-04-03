@@ -24,7 +24,7 @@ const Mainnav = () => {
             </form>
           </div>
           <button className={styles.btn}>
-        <Link className={styles.btn} to="./MainPage">
+        <Link className={styles.btn} to="./Newnote">
           New note
         </Link>
       </button>
