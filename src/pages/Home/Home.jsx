@@ -1,6 +1,6 @@
 import React from "react";
-import {Navbar} from "../components/Navbar";
-import Hero from  "../assests/hero.svg"
+import {Navbar} from "../../components/Navbar/Navbar";
+import Hero from  "../../assests/hero.svg"
 import styles from "./Home.module.css";
 import { Link } from "react-router-dom";
 

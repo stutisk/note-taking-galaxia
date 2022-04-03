@@ -1,6 +1,6 @@
 
-export {Navbar} from "./Navbar";
-export {Mainnav} from "./Mainnav";
+export {Navbar} from "./Navbar/Navbar";
+export {Mainnav} from "./Navbar/Mainnav";
 export {Icons} from "./Icons";
-export {Notes} from "./Notes";
-export {Aside} from "./Aside";
+export {Notes} from "./Notes/Notes";
+export {Aside} from "./Aside/Aside";

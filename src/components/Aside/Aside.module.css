@@ -1,0 +1,24 @@
+.aside {
+    width: 18rem;
+    display: flex;
+    flex-direction: column;
+    box-sizing: border-box;
+    min-height: auto;
+    letter-spacing: 0.01785714em;
+    font-family: "Google Sans", Roboto, Arial, sans-serif;
+    height: 100%;
+  }
+  .aside > * {
+    font-size: var(--size-1);
+    line-height: 1.25rem;
+    border-radius: var(--border-radius-aside);
+  }
+  
+  .aside > :hover {
+    background-color: var(--aside-hover);
+  }
+  .routelink {
+    text-decoration: none;
+    color: var(--black-color);
+  }
+  

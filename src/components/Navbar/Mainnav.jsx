@@ -1,6 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import styles from "../pages/Home.module.css";
+// import styles from "../pages/Home/Home.module.css";
+import styles from "./Mainnav.module.css";
 
 const Mainnav = () => {
   return (

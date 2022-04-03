@@ -1,6 +1,6 @@
 import React from "react";
-import styles from "../pages/Home.module.css";
-import {BsArchive, BsTrash,MdOutlineLabel,BsPin , VscSymbolColor } from "./Icons"
+import styles from "./Notes.module.css";
+import {BsArchive, BsTrash,MdOutlineLabel,BsPin , VscSymbolColor } from "../Icons"
 
 const Notes = () => {
   return (

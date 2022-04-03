@@ -1,7 +1,7 @@
 import React from "react";
-import { Mainnav } from "../../components/Mainnav";
-import { Aside } from "../../components/Aside";
-import { Notes } from "../../components/Notes";
+import { Mainnav } from "../../components/Navbar/Mainnav";
+import { Aside } from "../../components/Aside/Aside";
+import { Notes } from "../../components/Notes/Notes";
 
 const MainPage = () => {
   return (
