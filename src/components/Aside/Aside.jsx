@@ -6,7 +6,7 @@ import {BsArchive, BsTrash,MdOutlineLabel,VscHome , CgProfile } from "../Icons"
 const Aside = () => {
   return (
     <>
-    <div className={styles.asidebox}>
+    <div className={` m-t5 ${styles.asidebox}`}>
       <div className={` pointer ${styles.aside}`} >
         <Link to="#" className={` padding ${styles.routelink}`}>
           <VscHome size={25} className=" icon-color m-R" />

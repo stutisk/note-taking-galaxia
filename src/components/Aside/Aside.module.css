@@ -7,11 +7,13 @@
     letter-spacing: 0.01785714em;
     font-family: "Google Sans", Roboto, Arial, sans-serif;
     height: 100%;
+    
   }
   .aside > * {
     font-size: var(--size-1);
     line-height: 1.25rem;
     border-radius: var(--border-radius-aside);
+    
   }
   
   .aside > :hover {
