@@ -16,6 +16,7 @@ const Navbar=()=> {
               <Link to="https://mail.google.com/mail/u/0/#inbox">Github<i className="fa fa-github"></i></Link>
               </li>
               <li>
+                
                 <Link to="/">Log In</Link>
               </li>
               <li>

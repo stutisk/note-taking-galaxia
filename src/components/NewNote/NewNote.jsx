@@ -2,9 +2,6 @@ import React from "react";
 import styles from "../Notes/Notes.module.css";
 
 import {
-  BsArchive,
-  BsTrash,
-  MdOutlineLabel,
   BsPin,
   VscSymbolColor,
 } from "../Icons";
