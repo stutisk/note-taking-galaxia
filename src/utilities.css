@@ -1,18 +1,18 @@
 :root {
   --red-colorl1: #ff6584;
   --red-colord2: #f74165;
-  --input-box-color:#f0f2f4;
-  --black-color:rgb(6, 6, 6);
-  --white-color:#e4f1ef;
-  --aside-hover:#e4f1ef;
-  --note-bg-color:#cccccc3c;
+  --input-box-color: #f0f2f4;
+  --black-color: rgb(6, 6, 6);
+  --white-color: #e4f1ef;
+  --aside-hover: #e4f1ef;
+  --note-bg-color: #cccccc3c;
   --border-radius1: 4px;
-  --border-radius-aside:0 25px 25px 0;
+  --border-radius-aside: 0 25px 25px 0;
   /* font-family: "Google Sans", Roboto, Arial, sans-serif; */
 }
 
 .padding1 {
-  padding: 10px 1.25rem ;
+  padding: 10px 1.25rem;
 }
 .p-r1 {
   padding-right: 1rem;
@@ -35,12 +35,12 @@
 }
 /* icons */
 .icon-color {
-  color:var(--main-Cta-color);
+  color: var(--main-Cta-color);
   font-weight: 800;
 }
 
 .headings {
-  color:var(--main-Cta-color);
+  color: var(--main-Cta-color);
   font-size: var(--size-1);
   padding: 2rem;
   letter-spacing: 0.01785714em;
@@ -64,6 +64,10 @@
 .pointer {
   cursor: pointer;
 }
-.height{
-  widht:100%
+.height {
+  width: 100%;
+}
+.checkout-header {
+  font-size: var(--size-1);
+text-align: center;
 }

@@ -4,8 +4,6 @@ import "./index.css";
 import App from "./App";
 import { makeServer } from "./server";
 import { BrowserRouter as Router } from "react-router-dom";
-// import {Home} from "./pages/Home";
-// Call make Server
 makeServer();
 
 ReactDOM.render(
