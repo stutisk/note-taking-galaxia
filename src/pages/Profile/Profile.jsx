@@ -7,7 +7,7 @@ const Profile = () => {
   return (
     <div>
 
-      <div className="grid-container  m-t5 m-l5">
+      <div className="grid-container ">
         <div>
           <Aside />
         </div>

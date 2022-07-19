@@ -18,7 +18,7 @@ function App() {
         <Route path="/login" element={<Login />} />
         <Route path="/signup" element={<Signup />} />
         <Route path="/" element={<PrivateRoute />}>
-          <Route path="/" element={<MainPage/>} />
+          <Route path="/mainpage" element={<MainPage/>} />
           <Route path="/label" element={<Labelpage />} />
           <Route path="/archieve" element={<Archievepage />} />
           <Route path="/trash" element={<Trashpage />} />

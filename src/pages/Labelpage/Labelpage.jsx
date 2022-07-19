@@ -6,7 +6,7 @@ import { Aside } from "../../components/Aside/Aside";
 const Labelpage = () => {
   return (
     <div>
-      <div className="grid-container  m-t5 m-l5">
+      <div className="grid-container ">
         <div>
           <Aside />
         </div>

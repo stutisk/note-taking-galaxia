@@ -8,7 +8,7 @@ const Aside = () => {
     <>
     <div className={` m-t5 ${styles.asidebox}`}>
       <div className={` pointer ${styles.aside}`} >
-        <Link to="/" className={` padding ${styles.routelink}`}>
+        <Link to="/mainpage" className={` padding ${styles.routelink}`}>
           <VscHome size={25} className=" icon-color m-R" />
           Home
         </Link>

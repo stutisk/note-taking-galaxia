@@ -29,7 +29,7 @@ const Mainnav = () => {
         </Link>
       </button>
       <div className={styles.profiledetails}>
-            <Link to="/">
+            <Link to="login">
               <img
                 src="https://picsum.photos/id/1027/80/120"
                 alt="Avatar "

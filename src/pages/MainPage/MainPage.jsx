@@ -7,8 +7,8 @@ import { NewNote } from "../../components/NewNote/NewNote.jsx";
 const MainPage = () => {
   return (
     <div>
-      <Mainnav />
-      <div className="grid-container  m-t5 m-l5">
+     
+      <div className="grid-container ">
         <div>
           <Aside />
         </div>
