@@ -3,8 +3,50 @@ import { Mainnav } from "../../components/Navbar/Mainnav";
 import styles from "../AuthPage/AuthPage.module.css";
 import { AiFillCaretRight } from "react-icons/ai";
 import { Link } from "react-router-dom";
+import {useRef,useEffect} from "react";
+import axios  from "axios";
+import { useAuth } from "../../Context/AuthContext";
+import { useLocation,useNavigate } from "react-router-dom";
 
 const Signup = () => {
+
+  const useremail = useRef();
+  const userpass = useRef();
+  const userfirstname=useRef();
+  const userlastname=useRef();
+  const navigate = useNavigate();
+  const location = useLocation();
+  const { isLogin, setLogin, Error,setError } = useAuth();
+
+  const signupHandler = async() => {
+    try {
+      const response = await axios.post(`/api/auth/signup`, {
+        firstName: userfirstname.current.value,
+        lastName: userlastname.current.value,
+        email: useremail.current.value,
+        password: userpass.current.value,
+      });
+      setLogin(true);
+      console.log(response);
+      const userDetail = {
+        Email: response.data.createdUser.email,
+        name:
+          response.data.createdUser.firstName +
+          " " +
+          response.data.createdUser.lastName,
+      };
+      // saving the encodedToken in the localStorage
+      localStorage.setItem("token", response.data.encodedToken);
+      localStorage.setItem("user", JSON.stringify(userDetail));
+      navigate("/mainpage");
+  
+    } catch (error) {
+      console.log(error);
+      console.log(error.response.data.errors[0]);
+      setError({ error: error.response.data.errors[0] });
+    }
+  
+  }
   return (
     <div>
       {/* <Mainnav /> */}
@@ -22,6 +64,7 @@ const Signup = () => {
                 className={` m-5 input-padding ${styles.aunthInput}`}
                 type="text"
                 placeholder="supriya"
+                ref={userfirstname}
               />
               <label for="aunth-input" className="label m-1t">
                 {" "}
@@ -31,6 +74,7 @@ const Signup = () => {
                 className={` m-5 input-padding ${styles.aunthInput}`}
                 type="email"
                 placeholder="Sk"
+                ref={userlastname}
               />
               <label for="aunth-input" className="label m-1t">
                 {" "}
@@ -39,7 +83,8 @@ const Signup = () => {
               <input
                 className={` m-5 input-padding ${styles.aunthInput}`}
                 type="email"
-                placeholder="supriya"
+                placeholder="Sk1234@gmail.com"
+                ref={useremail}
               />
               <label for="aunth-input" className="label m-1t">
                 {" "}
@@ -48,7 +93,8 @@ const Signup = () => {
               <input
                 className={` m-5 input-padding ${styles.aunthInput}`}
                 type="email"
-                placeholder="supriya"
+                placeholder="*******"
+                ref={userpass}
               />
               <label for="aunth-input" className="label m-1t">
                 {" "}
@@ -57,10 +103,11 @@ const Signup = () => {
               <input
                 className={` m-5 input-padding ${styles.aunthInput}`}
                 type="email"
-                placeholder="supriya"
+                placeholder="*******"
               />
 
-              <button className={`m-5  btn-padding ${styles.loginBtn}`}>
+              <button onClick={signupHandler}
+              className={`m-5  btn-padding ${styles.loginBtn}`}>
                 CREATE AN ACCOUNT
               </button>
 

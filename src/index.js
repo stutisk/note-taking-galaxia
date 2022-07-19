@@ -5,6 +5,7 @@ import App from "./App";
 import { makeServer } from "./server";
 import { BrowserRouter as Router } from "react-router-dom";
 import { NotesProvider } from "../src/Context/NotesContext";
+import{AuthProvider} from "../src/Context/AuthContext"
 makeServer();
 
 ReactDOM.render(
@@ -12,7 +13,9 @@ ReactDOM.render(
    
       <NotesProvider>
         <Router>
+        <AuthProvider>
           <App />
+          </AuthProvider>
         </Router>
       </NotesProvider>
     

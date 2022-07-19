@@ -20,6 +20,8 @@ const Login = () => {
         email: useremail.current.value,
         password: userpass.current.value,
       });
+     
+      console.log(response);
 
       const userDetail = {
         Email: response.data.foundUser.email,
@@ -30,6 +32,7 @@ const Login = () => {
       };
       localStorage.setItem("token", response.data.encodedToken);
       localStorage.setItem("user", JSON.stringify(userDetail));
+     
     } catch (error) {
       console.log(error);
       console.log(error.response.data.errors[0]);
@@ -44,6 +47,8 @@ const Login = () => {
     navigate("/mainpage");
     console.log(useremail.current.value);
   };
+
+  
 
   return (
     <div>

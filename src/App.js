@@ -7,8 +7,9 @@ import { Archievepage } from "./pages/ArchievePage/Archievepage";
 import { Profile } from "./pages/Profile/Profile";
 import { Trashpage } from "./pages/Trashpage/Trashpage";
 import { Login } from "./pages/AuthPage/Login";
-import {Signup} from "./pages/AuthPage/Signup";
+import { Signup } from "./pages/AuthPage/Signup";
 import { PrivateRoute } from "./components/PrivateRoute/PrivateRoute";
+
 function App() {
   return (
     <div className="App">
@@ -18,7 +19,7 @@ function App() {
         <Route path="/login" element={<Login />} />
         <Route path="/signup" element={<Signup />} />
         <Route path="/" element={<PrivateRoute />}>
-          <Route path="/mainpage" element={<MainPage/>} />
+          <Route path="/mainpage" element={<MainPage />} />
           <Route path="/label" element={<Labelpage />} />
           <Route path="/archieve" element={<Archievepage />} />
           <Route path="/trash" element={<Trashpage />} />
