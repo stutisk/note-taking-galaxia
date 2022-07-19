@@ -15,11 +15,7 @@ const MainPage = () => {
         <section>
             <div className="flex-column-start"><NewNote /></div>
             <div className="flex-column-start m-1">
-              <Notes />
-              <Notes />
-              <Notes />
-              <Notes />
-              <Notes />
+              <Notes />     
             </div>
           
         </section>

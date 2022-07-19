@@ -23,3 +23,10 @@
  textarea:focus{
   outline:none;
  }
+ .button{
+  font-size: var(--size-1);
+  
+  font-weight:400;
+ 
+ border-radius:15px;
+}

@@ -4,16 +4,34 @@ import styles from "../AuthPage/AuthPage.module.css";
 import { AiFillCaretRight } from "react-icons/ai";
 import { Link } from "react-router-dom";
 
-const Login = () => {
+const Signup = () => {
   return (
     <div>
-    
+      {/* <Mainnav /> */}
       <section className={styles.loginSection}>
-        <div className={` m-t5 ${styles.authContainer}`} id="container">
+        <div className={` m-t3 ${styles.authContainer}`} id="container">
           <div className="form-container ">
-            <form action="login.html" className={` m-t ${styles.form}`}>
-              <h3 className={` m-5 ${styles.auntHeading}`}>Good To See You Again</h3>
+            <form action="login.html" className={` m-1t ${styles.form}`}>
+              <h3 className={` m-5 ${styles.auntHeading}`}>Get Started With Your Account</h3>
 
+              <label for="aunth-input" className="label m-1t">
+                {" "}
+                First Name*
+              </label>
+              <input
+                className={` m-5 input-padding ${styles.aunthInput}`}
+                type="text"
+                placeholder="supriya"
+              />
+              <label for="aunth-input" className="label m-1t">
+                {" "}
+                Last Name*
+              </label>
+              <input
+                className={` m-5 input-padding ${styles.aunthInput}`}
+                type="email"
+                placeholder="Sk"
+              />
               <label for="aunth-input" className="label m-1t">
                 {" "}
                 Email Address*
@@ -32,19 +50,25 @@ const Login = () => {
                 type="email"
                 placeholder="supriya"
               />
+              <label for="aunth-input" className="label m-1t">
+                {" "}
+                Confirm Password*
+              </label>
+              <input
+                className={` m-5 input-padding ${styles.aunthInput}`}
+                type="email"
+                placeholder="supriya"
+              />
 
               <button className={`m-5  btn-padding ${styles.loginBtn}`}>
-                Login
-              </button>
-              <button className={`m-5  btn-padding ${styles.loginBtnsec}`}>
-                Login As Guest
+                CREATE AN ACCOUNT
               </button>
 
               <Link
-                to="/signup"
+                to="/login"
                 className={`m-5  logout icon-color ${styles.externallink}`}
               >
-                Don't have an account? Sign up !
+                Already have an account? Log in!
                 <span>
                   <AiFillCaretRight size={25} className="icon-color" />
                 </span>
@@ -56,4 +80,4 @@ const Login = () => {
     </div>
   );
 };
-export { Login };
+export { Signup };

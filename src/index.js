@@ -4,16 +4,18 @@ import "./index.css";
 import App from "./App";
 import { makeServer } from "./server";
 import { BrowserRouter as Router } from "react-router-dom";
+import { NotesProvider } from "../src/Context/NotesContext";
 makeServer();
 
 ReactDOM.render(
   <React.StrictMode>
-    {/* <BrowserRouter> */}
-    <Router>
-    <App />
-    </Router>
+   
+      <NotesProvider>
+        <Router>
+          <App />
+        </Router>
+      </NotesProvider>
     
-    {/* </BrowserRouter>    */}
   </React.StrictMode>,
   document.getElementById("root")
 );
