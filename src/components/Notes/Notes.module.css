@@ -6,6 +6,7 @@
       0 2px 4px -1px rgba(0, 0, 0, 0.06);
     border: 3px solid var(--white-color);
     padding: 1rem;
+    
   }
   .notefooter{
     font-size: var(--size-1);

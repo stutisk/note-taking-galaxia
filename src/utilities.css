@@ -8,6 +8,7 @@
   --note-bg-color: #cccccc3c;
   --border-radius1: 4px;
   --border-radius-aside: 0 25px 25px 0;
+  --empty-state:#adcbc8;
   /* font-family: "Google Sans", Roboto, Arial, sans-serif; */
 }
 
@@ -70,4 +71,8 @@
 .checkout-header {
   font-size: var(--size-1);
 text-align: center;
+}
+
+.empty-state{
+  color:var(--empty-state)
 }

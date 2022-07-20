@@ -3,7 +3,6 @@ import styles from "../Notes/Notes.module.css";
 import { useRef } from "react";
 import axios from "axios";
 import { BsPin, VscSymbolColor } from "../Icons";
-// import { ColorModal } from "../ColorModal/ColorModal";
 import { useNotes } from "../../Context/NotesContext";
 const NewNote = () => {
   const notesInput = useRef();
