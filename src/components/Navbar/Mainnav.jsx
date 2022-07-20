@@ -9,7 +9,7 @@ const Mainnav = () => {
       <div className="container m-a">
         <nav className="nav-bar ">
           <div className="left-side  ">
-            <Link to="/">
+            <Link to="/mainpage">
               {" "}
               GALA<span class="span">X!A</span>
             </Link>
@@ -29,7 +29,7 @@ const Mainnav = () => {
         </Link>
       </button>
       <div className={styles.profiledetails}>
-            <Link to="/">
+            <Link to="profile">
               <img
                 src="https://picsum.photos/id/1027/80/120"
                 alt="Avatar "

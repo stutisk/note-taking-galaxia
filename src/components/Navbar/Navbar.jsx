@@ -7,7 +7,7 @@ const Navbar=()=> {
       <div className="container m-a">
         <nav className="nav-bar ">
           <div className="left-side">
-          <Link to="/"> GALA<span class="span">X!A</span></Link>
+          <Link to="/mainpage"> GALA<span class="span">X!A</span></Link>
 
           </div>
           <div className="right-side">
