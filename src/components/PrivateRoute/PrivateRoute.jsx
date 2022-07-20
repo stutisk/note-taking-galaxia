@@ -1,5 +1,5 @@
 import { Mainnav } from "../Navbar/Mainnav";
-import { Outlet, Navigate, useLocation } from "react-router-dom";
+import { Outlet } from "react-router-dom";
 import React from "react";
 const PrivateRoute = () => {
   

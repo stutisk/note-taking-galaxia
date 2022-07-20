@@ -1,9 +1,8 @@
 import React from "react";
-import { Mainnav } from "../../components/Navbar/Mainnav";
 import styles from "../AuthPage/AuthPage.module.css";
 import { AiFillCaretRight } from "react-icons/ai";
 import { Link } from "react-router-dom";
-import {useRef,useEffect} from "react";
+import {useRef} from "react";
 import axios  from "axios";
 import { useAuth } from "../../Context/AuthContext";
 import { useLocation,useNavigate } from "react-router-dom";
@@ -15,8 +14,8 @@ const Signup = () => {
   const userfirstname=useRef();
   const userlastname=useRef();
   const navigate = useNavigate();
-  const location = useLocation();
-  const { isLogin, setLogin, Error,setError } = useAuth();
+
+  const { setLogin,setError } = useAuth();
 
   const signupHandler = async() => {
     try {

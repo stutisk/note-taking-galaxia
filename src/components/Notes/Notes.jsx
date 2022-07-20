@@ -8,16 +8,9 @@ import {
   VscSymbolColor,
 } from "../Icons";
 
-import { useRef, useState } from "react";
-import axios from "axios";
-import { useNotes } from "../../Context/NotesContext"
 
 const Notes = ({ note }) => {
   
-
-
-
-
   return (
     <>
       <div className={styles.note}>
