@@ -5,7 +5,7 @@ import { Link } from "react-router-dom";
 import axios from "axios";
 import { useRef} from "react";
 import { useAuth } from "../../Context/AuthContext";
-import { useLocation, useNavigate } from "react-router-dom";
+import {  useNavigate } from "react-router-dom";
 const Login = () => {
   const useremail = useRef();
   const userpass = useRef();
