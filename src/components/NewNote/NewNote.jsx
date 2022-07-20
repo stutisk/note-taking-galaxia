@@ -1,40 +1,43 @@
 import React from "react";
 import styles from "../Notes/Notes.module.css";
-import { useRef } from "react";
+import { useRef, useState } from "react";
 import axios from "axios";
 import { BsPin, VscSymbolColor } from "../Icons";
-import { ColorModal } from "../ColorModal/ColorModal";
+// import { ColorModal } from "../ColorModal/ColorModal";
+import { useNotes } from "../../Context/NotesContext";
 const NewNote = () => {
   const notesInput = useRef();
+  const { setNotes } = useNotes();
 
-  // const addNewNote = () => {
-  
- 
-  //     (async () => {
-  //       try {
-  //         const response = await axios.post(
-  //           `/api/notes`,
-  //           {
-  //             note: {
-  //               dec: notesInput.current.value,
-  //             },
-  //           },
-  //           {
-  //             headers: { authorization: localStorage.getItem("token") },
-  //           }
-  //         );
+  const clearInput = () => (notesInput.current.value = "");
 
-  //         console.log(response.data);
-  //       } catch (error) {
-  //         console.log(error);
-  //       }
-  //     })();
-    
-  // };
+  const addNewNote = () => {
+    if (localStorage.getItem("token")) {
+      (async () => {
+        try {
+          const response = await axios.post(
+            `/api/notes`,
+            {
+              note: {
+                content: notesInput.current.value,
+              },
+            },
+            {
+              headers: { authorization: localStorage.getItem("token") },
+            }
+          );
+          console.log(response.data);
+          setNotes(response.data.notes);
+          clearInput();
+        } catch (error) {
+          console.log(error);
+        }
+      })();
+    }
+  };
 
   return (
     <div>
-      
       <div className={styles.note}>
         {/* <ColorModal/> */}
         <div className="flex-column-end">
@@ -51,7 +54,7 @@ const NewNote = () => {
         />
 
         <div className="flex-column-end ">
-          <button className={`${styles.notefooter} `}>
+          <button onClick={addNewNote} className={`${styles.notefooter} `}>
             Save
           </button>
         </div>

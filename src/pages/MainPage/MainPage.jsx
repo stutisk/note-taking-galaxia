@@ -3,6 +3,7 @@ import { Mainnav } from "../../components/Navbar/Mainnav";
 import { Aside } from "../../components/Aside/Aside";
 import { Notes } from "../../components/Notes/Notes";
 import { NewNote } from "../../components/NewNote/NewNote.jsx";
+import { NotesList } from "../../components/NotesList/NotesList";
 
 const MainPage = () => {
   return (
@@ -15,7 +16,7 @@ const MainPage = () => {
         <section>
             <div className="flex-column-start"><NewNote /></div>
             <div className="flex-column-start m-1">
-              <Notes />     
+              <NotesList />     
             </div>
           
         </section>
