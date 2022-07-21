@@ -26,8 +26,18 @@
  }
  .button{
   font-size: var(--size-1);
-  
   font-weight:400;
- 
  border-radius:15px;
+}
+.modal{
+  position: fixed;
+  top:0;
+  left: 0;
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  backdrop-filter: blur(3px);
+  z-index: 1;
 }

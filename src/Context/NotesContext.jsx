@@ -9,7 +9,9 @@ const useNotes = () => useContext(Notescontext);
 
 const NotesProvider = ({ children }) => {
   const [notes, setNotes] = useState([]);
-  
+
+
+ 
   
   return (
     <Notescontext.Provider value={{notes,setNotes}}>

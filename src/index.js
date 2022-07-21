@@ -7,6 +7,7 @@ import { BrowserRouter as Router } from "react-router-dom";
 import { NotesProvider } from "../src/Context/NotesContext";
 import { AuthProvider } from "../src/Context/AuthContext";
 import { ArchieveProvider } from "./Context/ArchieveContext";
+import { ModalProvider } from "./Context/ModalContext";
 
 makeServer();
 
@@ -16,7 +17,9 @@ ReactDOM.render(
       <Router>
         <AuthProvider>
           <ArchieveProvider>
+            <ModalProvider>
             <App />
+            </ModalProvider>
           </ArchieveProvider>
         </AuthProvider>
       </Router>
