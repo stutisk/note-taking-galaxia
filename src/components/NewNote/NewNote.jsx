@@ -67,7 +67,9 @@ const NewNote = () => {
 
   return (
     <div>
+      
       {isModal ? (
+
         <div className={styles.modal}>
           <div className={styles.note}>
            
@@ -90,7 +92,9 @@ const NewNote = () => {
         </div>
       ) : (
         <div>
+
           <div className={styles.note}>
+          <h3 className="empty-state">Notes-{notes.length}</h3>
             <div className="flex-column-end">
               <VscSymbolColor size={23} className=" icon-color  pointer" />
               <BsPin size={25} className=" icon-color pointer" />
