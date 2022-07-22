@@ -5,7 +5,8 @@
     box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1),
       0 2px 4px -1px rgba(0, 0, 0, 0.06);
     border: 3px solid var(--white-color);
-    padding: 1rem;
+    padding: 1rem
+    
   }
   .notefooter{
     font-size: var(--size-1);
@@ -25,8 +26,18 @@
  }
  .button{
   font-size: var(--size-1);
-  
   font-weight:400;
- 
  border-radius:15px;
+}
+.modal{
+  position: fixed;
+  top:0;
+  left: 0;
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  backdrop-filter: blur(3px);
+  z-index: 1;
 }

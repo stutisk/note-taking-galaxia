@@ -12,7 +12,7 @@ const MainPage = () => {
           <Aside />
         </div>
         <section>
-            <div className="flex-column-start"><NewNote /></div>
+            <div className="checkout-header ml-10"><NewNote /></div>
             <div className="flex-column-start m-1">
               <NotesList />     
             </div>
