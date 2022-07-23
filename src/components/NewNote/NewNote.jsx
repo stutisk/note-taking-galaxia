@@ -1,6 +1,6 @@
 import React from "react";
 import styles from "../Notes/Notes.module.css";
-import { useRef, useEffect } from "react";
+import { useRef } from "react";
 import axios from "axios";
 import { BsPin, VscSymbolColor } from "../Icons";
 import { useNotes } from "../../Context/NotesContext";
