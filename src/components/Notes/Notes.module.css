@@ -16,13 +16,15 @@
     border-radius:15px;
   }
  textarea{
-   border:none;
+   
    resize:none;
    background:transparent;
+   border:2px solid var(--main-Cta-color);
    
  }
  textarea:focus{
   outline:none;
+  border:2px solid var(--main-Cta-color);
  }
  .button{
   font-size: var(--size-1);
@@ -40,4 +42,22 @@
   justify-content: center;
   backdrop-filter: blur(3px);
   z-index: 1;
+}
+.chip{
+ display: inline-block;
+  border:2px solid var(--main-Cta-color);
+  border-radius:15px;
+  font-size: var( --size-0);
+  background-color: var(--note-bg-color);
+  
+}
+
+.chipContainer{
+  list-style-type: none;
+}
+input:focus {
+  border:2px solid var(--main-Cta-color);
+}
+*:focus {
+  outline: none;
 }
