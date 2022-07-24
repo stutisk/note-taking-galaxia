@@ -1,18 +1,18 @@
 import React from "react";
 import styles from "./Notes.module.css";
 import {
-  BsArchive,
+
   BsTrash,
   MdOutlineLabel,
-  BsPin,
+
   VscSymbolColor,
   RiInboxArchiveLine,
-  RiInboxUnarchiveLine,
+
   MdEditNote
 } from "../Icons";
 import { useArchieve } from "../../Context/ArchieveContext";
 import { useModal } from "../../Context/ModalContext";
-
+import { LabelsModal } from "../LabelsModal/LabelsModal";
 const Notes = ({ note }) => {
   const { AddtoArchiveHandler } = useArchieve();
   const { setIsModal, setSelectednote } = useModal();
@@ -43,10 +43,12 @@ const Notes = ({ note }) => {
           />
            
           <MdOutlineLabel size={24} className=" icon-color pointer m-R1  " />
+         
           <VscSymbolColor size={24} className=" icon-color  pointer m-R1" />
        
         </div>
       </div>
+      {/* <LabelsModal/> */}
     </>
   );
 };

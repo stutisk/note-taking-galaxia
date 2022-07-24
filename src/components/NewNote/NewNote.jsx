@@ -2,7 +2,7 @@ import React from "react";
 import styles from "../Notes/Notes.module.css";
 import { useRef, useEffect } from "react";
 import axios from "axios";
-import { BsPin, VscSymbolColor } from "../Icons";
+import { MdOutlineLabel, VscSymbolColor } from "../Icons";
 import { useNotes } from "../../Context/NotesContext";
 import { useModal } from "../../Context/ModalContext";
 const NewNote = () => {
@@ -36,9 +36,8 @@ const NewNote = () => {
       })();
     }
   };
- 
+
   const updateNote = () => {
-   
     (async () => {
       try {
         const response = await axios.post(
@@ -56,27 +55,24 @@ const NewNote = () => {
         console.log();
         setNotes(response.data.notes.reverse());
         setIsModal(false);
-       
       } catch (error) {
         console.log(error);
       }
     })();
-  
   };
- 
+
+  useEffect(() => {
+    isModal ? (notesInput.current.value = selectedNote.content) : <></>;
+  });
 
   return (
     <div>
-      
       {isModal ? (
-
         <div className={styles.modal}>
           <div className={styles.note}>
-           
             <textarea
               className={styles.textarea}
               type="text"
-              // placeholder="Start writing..."
               rows="500"
               column="500"
               ref={notesInput}
@@ -92,12 +88,14 @@ const NewNote = () => {
         </div>
       ) : (
         <div>
-
           <div className={styles.note}>
-          <h3 className="empty-state">Notes-{notes.length}</h3>
+            <h3 className="empty-state">Notes-{notes.length}</h3>
             <div className="flex-column-end">
               <VscSymbolColor size={23} className=" icon-color  pointer" />
-              <BsPin size={25} className=" icon-color pointer" />
+              <MdOutlineLabel
+                size={24}
+                className=" icon-color pointer m-R1  "
+              />
             </div>
             <textarea
               className={styles.textarea}
@@ -106,7 +104,6 @@ const NewNote = () => {
               rows="500"
               column="500"
               ref={notesInput}
-              // value={myRef.current.value}
             />
 
             <div className="flex-column-end ">

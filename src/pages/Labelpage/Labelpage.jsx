@@ -37,6 +37,7 @@ const Labelpage = () => {
           >
             {labels.map((item, index) => {
               return (
+                
                 <li className={` padding1  ${styles.chip}  `}>
                   {item}
                   <AiOutlineCloseCircle

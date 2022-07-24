@@ -93,3 +93,10 @@ text-align: center;
   flex-wrap: wrap;
   gap:1rem
 }
+.flex-column {
+  display: flex;
+  flex-direction: column;
+  /* justify-content: space-evenly; */
+  flex-wrap: wrap;
+  gap:1rem
+}
