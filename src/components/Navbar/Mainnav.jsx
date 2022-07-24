@@ -2,6 +2,7 @@ import React from "react";
 import { Link } from "react-router-dom";
 // import styles from "../pages/Home/Home.module.css";
 import styles from "./Mainnav.module.css";
+import {MdOutlineLogout} from "../Icons"
 
 const Mainnav = () => {
   return (
@@ -29,13 +30,8 @@ const Mainnav = () => {
         </Link>
       </button>
       <div className={styles.profiledetails}>
-            <Link to="profile">
-              <img
-                src="https://picsum.photos/id/1027/80/120"
-                alt="Avatar "
-                class="avatar size-large"
-              />
-            </Link>
+            
+            <MdOutlineLogout size={35} className=" icon-color  pointer"/>
           </div>
         </nav>
       </div>
