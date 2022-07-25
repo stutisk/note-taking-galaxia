@@ -22,7 +22,7 @@ const Notes = ({ note }) => {
 
   return (
     <>
-      <div className={styles.note}>
+      <div className={styles.notes}>
         <div>
           <div className="flex-column-end">
             {" "}
@@ -43,7 +43,7 @@ const Notes = ({ note }) => {
         <div className="m-1">{note.content}</div>
        
         <div className="flex-column-end gap3">
-        <div className=" icon-color pointer m-R1">{note.createdAt}</div>
+        {/* <div className=" icon-color pointer m-R1">{note.createdAt}</div> */}
           <select className=" icon-color pointer m-R1  ">
             <option value="volvo">Labels</option>
             {labels.map((item) => {
