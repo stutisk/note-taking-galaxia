@@ -58,6 +58,8 @@ textarea:focus {
   font-size: var(--size-0);
   background-color: var(--note-bg-color);
 }
+
+
 .labellist {
   border-radius: 15px;
   font-size: var(--size-0.5);

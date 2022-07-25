@@ -7,10 +7,13 @@ import { useNotes } from "../../Context/NotesContext";
 import { useModal } from "../../Context/ModalContext";
 const NewNote = () => {
   const notesInput = useRef();
-
-  const { setNotes, notes } = useNotes();
+const selectlabels = useRef();
+const selectPriority= useRef();
+  const { setNotes, notes, labels } = useNotes();
   const { selectedNote, isModal, setIsModal } = useModal();
   const clearInput = () => (notesInput.current.value = "");
+  // const priority = ["low", "Medium", "High"];
+ 
 
   const addNewNote = () => {
     if (localStorage.getItem("token")) {
@@ -21,8 +24,9 @@ const NewNote = () => {
             {
               note: {
                 content: notesInput.current.value,
-               
-                createdAt:new Date().toLocaleString(),
+                tags: selectlabels.current.value,
+                createdAt: new Date().toLocaleTimeString([], {year: 'numeric', month: 'numeric', day: 'numeric', hour: '2-digit', minute: '2-digit'}),
+                priority:selectPriority.current.value,
               },
             },
             {
@@ -93,6 +97,18 @@ const NewNote = () => {
           <div className={styles.note}>
             <h3 className="empty-state">Notes-{notes.length}</h3>
             <div className="flex-column-end">
+              <select className=" icon-color pointer m-R1  " ref={selectlabels}>
+           
+                {labels.map((item) => {
+                  return <option>{item}</option>;
+                })}
+              </select>
+              <select className=" icon-color pointer m-R1  " ref={selectPriority}>
+              
+                <option value="low">low</option>
+                <option value="Medium">Medium</option>
+                <option value="High">High</option>
+              </select>
               <VscSymbolColor size={23} className=" icon-color  pointer" />
               <MdOutlineLabel
                 size={24}
