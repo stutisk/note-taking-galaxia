@@ -21,6 +21,8 @@ const NewNote = () => {
             {
               note: {
                 content: notesInput.current.value,
+               
+                createdAt:new Date().toLocaleString(),
               },
             },
             {
