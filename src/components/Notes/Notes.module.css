@@ -27,7 +27,7 @@
 }
 textarea {
   resize: none;
-  background: transparent;
+  /* background: transparent; */
   border: 2px solid var(--main-Cta-color);
 }
 textarea:focus {
@@ -75,4 +75,19 @@ input:focus {
 }
 *:focus {
   outline: none;
+}
+
+input[type="color"] {
+	-webkit-appearance: none;
+	border: none;
+	width: 32px;
+	/* height: 30px; */
+ 
+}
+input[type="color"]::-webkit-color-swatch-wrapper {
+	padding: 0;
+}
+input[type="color"]::-webkit-color-swatch {
+	border: none;
+  /* border-radius: var(--border-radius-50); */
 }

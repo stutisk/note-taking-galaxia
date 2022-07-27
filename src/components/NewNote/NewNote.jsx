@@ -7,13 +7,12 @@ import { useNotes } from "../../Context/NotesContext";
 import { useModal } from "../../Context/ModalContext";
 const NewNote = () => {
   const notesInput = useRef();
-const selectlabels = useRef();
-const selectPriority= useRef();
+  const selectlabels = useRef();
+  const selectPriority = useRef();
+  const inputColor = useRef();
   const { setNotes, notes, labels } = useNotes();
   const { selectedNote, isModal, setIsModal } = useModal();
   const clearInput = () => (notesInput.current.value = "");
-  // const priority = ["low", "Medium", "High"];
- 
 
   const addNewNote = () => {
     if (localStorage.getItem("token")) {
@@ -25,8 +24,15 @@ const selectPriority= useRef();
               note: {
                 content: notesInput.current.value,
                 tags: selectlabels.current.value,
-                createdAt: new Date().toLocaleTimeString([], {year: 'numeric', month: 'numeric', day: 'numeric', hour: '2-digit', minute: '2-digit'}),
-                priority:selectPriority.current.value,
+                createdAt: new Date().toLocaleTimeString([], {
+                  year: "numeric",
+                  month: "numeric",
+                  day: "numeric",
+                  hour: "2-digit",
+                  minute: "2-digit",
+                }),
+                priority: selectPriority.current.value,
+                color: inputColor.current.value,
               },
             },
             {
@@ -52,6 +58,9 @@ const selectPriority= useRef();
             note: {
               ...selectedNote,
               content: notesInput.current.value,
+              priority: selectPriority.current.value,
+              color: inputColor.current.value,
+              tags: selectlabels.current.value,
             },
           },
           {
@@ -76,6 +85,29 @@ const selectPriority= useRef();
       {isModal ? (
         <div className={styles.modal}>
           <div className={styles.note}>
+          <div className="flex-column-end">
+              <select className=" icon-color pointer m-R1  " ref={selectlabels}>
+                {labels.map((item) => {
+                  return <option>{item}</option>;
+                })}
+              </select>
+              <select
+                className=" icon-color pointer m-R1  "
+                ref={selectPriority}
+              >
+                <option value="low">low</option>
+                <option value="Medium">Medium</option>
+                <option value="High">High</option>
+              </select>
+
+              <input
+                type="color"
+                name="card-color"
+                id="card-color"
+                className="pointer"
+                ref={inputColor}
+              />
+            </div>
             <textarea
               className={styles.textarea}
               type="text"
@@ -98,25 +130,29 @@ const selectPriority= useRef();
             <h3 className="empty-state">Notes-{notes.length}</h3>
             <div className="flex-column-end">
               <select className=" icon-color pointer m-R1  " ref={selectlabels}>
-           
                 {labels.map((item) => {
                   return <option>{item}</option>;
                 })}
               </select>
-              <select className=" icon-color pointer m-R1  " ref={selectPriority}>
-              
+              <select
+                className=" icon-color pointer m-R1  "
+                ref={selectPriority}
+              >
                 <option value="low">low</option>
                 <option value="Medium">Medium</option>
                 <option value="High">High</option>
               </select>
-              <VscSymbolColor size={23} className=" icon-color  pointer" />
-              <MdOutlineLabel
-                size={24}
-                className=" icon-color pointer m-R1  "
+
+              <input
+                type="color"
+                name="card-color"
+                id="card-color"
+                className="pointer"
+                ref={inputColor}
               />
             </div>
             <textarea
-              className={styles.textarea}
+              className={`${styles.textarea}  `}
               type="text"
               placeholder="Start writing..."
               rows="500"
