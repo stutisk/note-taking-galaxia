@@ -5,6 +5,8 @@ import axios from "axios";
 import { MdOutlineLabel, VscSymbolColor } from "../Icons";
 import { useNotes } from "../../Context/NotesContext";
 import { useModal } from "../../Context/ModalContext";
+
+import { Link } from "react-router-dom";
 const NewNote = () => {
   const notesInput = useRef();
   const selectlabels = useRef();
@@ -85,7 +87,7 @@ const NewNote = () => {
       {isModal ? (
         <div className={styles.modal}>
           <div className={styles.note}>
-          <div className="flex-column-end">
+            <div className="flex-column-end">
               <select className=" icon-color pointer m-R1  " ref={selectlabels}>
                 {labels.map((item) => {
                   return <option>{item}</option>;
@@ -129,11 +131,20 @@ const NewNote = () => {
           <div className={styles.note}>
             <h3 className="empty-state">Notes-{notes.length}</h3>
             <div className="flex-column-end">
-              <select className=" icon-color pointer m-R1  " ref={selectlabels}>
-                {labels.map((item) => {
-                  return <option>{item}</option>;
-                })}
-              </select>
+              {labels.length > 0 ? (
+                <select
+                  className=" icon-color pointer m-R1  "
+                  ref={selectlabels}
+                >
+                  {labels.map((item) => {
+                    return <option>{item}</option>;
+                  })}
+                </select>
+              ) : (
+                <Link to="/label" className={` icon-color pointer m-R1  ${styles.routelink}`}>
+               Add  Labels
+                </Link>
+              )}
               <select
                 className=" icon-color pointer m-R1  "
                 ref={selectPriority}
