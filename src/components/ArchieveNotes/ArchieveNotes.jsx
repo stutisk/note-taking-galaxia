@@ -15,7 +15,7 @@ const ArchieveNotes = ({ note }) => {
   const {retoreFromArchieve,deleteFromArchieve} = useArchieve();
   return (
     <>
-      <div className={` m-t2 ${styles.note}`}>
+      <div className={` m-t2 ${styles.note}`}   style={{ backgroundColor: note.color }} >
         <div>
           <div className="flex-column-end">
             {" "}
