@@ -1,9 +1,10 @@
 import React from "react";
 import styles from "../Notes/Notes.module.css";
-import { useRef, useEffect } from "react";
+import { useRef } from "react";
 import axios from "axios";
 import { useNotes } from "../../Context/NotesContext";
 import { useModal } from "../../Context/ModalContext";
+import { useEffect } from "react";
 
 import { Link } from "react-router-dom";
 const NewNote = () => {
