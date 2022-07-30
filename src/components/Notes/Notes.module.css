@@ -93,7 +93,7 @@ input[type="color"] {
 	-webkit-appearance: none;
 	border: none;
 	width: 32px;
-	/* height: 30px; */
+
  
 }
 input[type="color"]::-webkit-color-swatch-wrapper {
@@ -101,5 +101,5 @@ input[type="color"]::-webkit-color-swatch-wrapper {
 }
 input[type="color"]::-webkit-color-swatch {
 	border: none;
-  /* border-radius: var(--border-radius-50); */
+  
 }
