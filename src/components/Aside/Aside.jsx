@@ -24,10 +24,7 @@ const Aside = () => {
           <BsTrash size={23} className="icon-color m-R" />
           Trash
         </Link>
-        <Link to="/profile" className={` padding ${styles.routelink}`}>
-          <CgProfile size={23} className="icon-color m-R" />
-          Profile
-        </Link>
+      
       </div>  
     </div>
     </>

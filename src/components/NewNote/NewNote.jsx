@@ -2,7 +2,6 @@ import React from "react";
 import styles from "../Notes/Notes.module.css";
 import { useRef, useEffect } from "react";
 import axios from "axios";
-import { MdOutlineLabel, VscSymbolColor } from "../Icons";
 import { useNotes } from "../../Context/NotesContext";
 import { useModal } from "../../Context/ModalContext";
 

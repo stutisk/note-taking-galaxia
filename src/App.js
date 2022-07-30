@@ -4,7 +4,6 @@ import { MainPage } from "./pages/MainPage/MainPage";
 import { MockAPI } from "./components/Mockman/Mockman";
 import { Labelpage } from "./pages/Labelpage/Labelpage";
 import { Archievepage } from "./pages/ArchievePage/Archievepage";
-import { Profile } from "./pages/Profile/Profile";
 import { Trashpage } from "./pages/Trashpage/Trashpage";
 import { Login } from "./pages/AuthPage/Login";
 import { Signup } from "./pages/AuthPage/Signup";
@@ -23,7 +22,7 @@ function App() {
           <Route path="/label" element={<Labelpage />} />
           <Route path="/archieve" element={<Archievepage />} />
           <Route path="/trash" element={<Trashpage />} />
-          <Route path="/profile" element={<Profile />} />
+        
         </Route>
       </Routes>
     </div>
