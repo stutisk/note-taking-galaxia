@@ -2,10 +2,13 @@ import React from "react";
 import { Link } from "react-router-dom";
 // import styles from "../pages/Home/Home.module.css";
 import styles from "./Mainnav.module.css";
-import {MdOutlineLogout} from "../Icons"
+import { MdOutlineLogout } from "../Icons";
+import { FilterModal } from "../FilterModal/FilterModal";
+import { useState } from "react";
 
 const Mainnav = () => {
-  // var user = JSON.parse(localStorage.getItem("user"));
+  const [show, setShow] = useState(false);
+  var user = JSON.parse(localStorage.getItem("user"));
   return (
     <>
       <div className="container m-a">
@@ -17,19 +20,20 @@ const Mainnav = () => {
             </Link>
           </div>
           <div className={styles.searchbar}>
-            <form action="#">
-              <input
-                type="search"
-                placeholder=" Search For Notes"
-                name="search"
-                   />
-            </form>
+            <div className=" checkout-header m-1t">Hola, {user.name} 🙋‍♀️</div>
           </div>
-         
-      {/* <div className=" checkout-header m-1t">Hola, {user.name} 🙋‍♀️</div> */}
-      <div className={styles.profiledetails}>
-      
-            <MdOutlineLogout size={35} className=" icon-color  pointer"/>
+          <button
+            onClick={() => setShow((prev) => !prev)}
+            className={styles.btn}
+          >
+            <Link className={styles.btn} to="./MainPage">
+              Filter
+            </Link>
+          </button>
+          {show && <FilterModal />}
+
+          <div className={styles.profiledetails}>
+            <MdOutlineLogout size={35} className=" icon-color  pointer" />
           </div>
         </nav>
       </div>

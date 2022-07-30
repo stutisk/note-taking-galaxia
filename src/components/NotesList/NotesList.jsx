@@ -1,13 +1,15 @@
 import { Notes } from "../Notes/Notes";
 import { useNotes } from "../../Context/NotesContext";
 import { RiStickyNoteLine } from "../../components/Icons";
+import { getFilteredList } from "../../utils/filterData";
 const NotesList = () => {
-  const { notes } = useNotes();
+  const { notes,state } = useNotes();
+  const Finalnotes = getFilteredList(notes, state)
   return (
     <>
    
-      {notes.length > 0 ? (
-        notes.map((item) => <Notes note={item} />)
+      {Finalnotes.length > 0 ? (
+        Finalnotes.map((item) => <Notes note={item} />)
       ) : (
         <div className=" checkout-header m-1t">
           {" "}

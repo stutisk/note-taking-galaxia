@@ -7,6 +7,18 @@
   border: 3px solid var(--white-color);
   padding: 1rem;
 }
+.ModalFilter{
+  background-color: var(--note-bg-color);
+  /* width: 30rem; */
+  border-radius: 8px;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1),
+    0 2px 4px -1px rgba(0, 0, 0, 0.06);
+  border: 3px solid var(--white-color);
+  padding: 1rem;
+  position:absolute;
+  left:70%;
+  top:90%;
+}
 .notes {
   overflow: hidden;
   height: 1%;
@@ -81,7 +93,7 @@ input[type="color"] {
 	-webkit-appearance: none;
 	border: none;
 	width: 32px;
-	/* height: 30px; */
+
  
 }
 input[type="color"]::-webkit-color-swatch-wrapper {
@@ -89,5 +101,5 @@ input[type="color"]::-webkit-color-swatch-wrapper {
 }
 input[type="color"]::-webkit-color-swatch {
 	border: none;
-  /* border-radius: var(--border-radius-50); */
+  
 }
