@@ -5,7 +5,7 @@ import styles from "./Mainnav.module.css";
 import {MdOutlineLogout} from "../Icons"
 
 const Mainnav = () => {
-  var user = JSON.parse(localStorage.getItem("user"));
+  // var user = JSON.parse(localStorage.getItem("user"));
   return (
     <>
       <div className="container m-a">
@@ -26,7 +26,7 @@ const Mainnav = () => {
             </form>
           </div>
          
-      <div className=" checkout-header m-1t">Hola, {user.name} 🙋‍♀️</div>
+      {/* <div className=" checkout-header m-1t">Hola, {user.name} 🙋‍♀️</div> */}
       <div className={styles.profiledetails}>
       
             <MdOutlineLogout size={35} className=" icon-color  pointer"/>
