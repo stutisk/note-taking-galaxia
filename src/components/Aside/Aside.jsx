@@ -1,7 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import styles from "./Aside.module.css";
-import {BsArchive, BsTrash,MdOutlineLabel,VscHome , CgProfile } from "../Icons"
+import {BsArchive, BsTrash,MdOutlineLabel,VscHome } from "../Icons"
 
 const Aside = () => {
   return (
