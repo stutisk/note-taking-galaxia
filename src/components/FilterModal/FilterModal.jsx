@@ -1,9 +1,9 @@
 import styles from "../Notes/Notes.module.css";
 import { useNotes } from "../../Context/NotesContext";
 const FilterModal = () => {
-  const { labels, state, dispatch } = useNotes();
+  const { labels,  dispatch } = useNotes();
   const PriorityList= ["low","Medium","high"]
-  const Dates= ["oldest","latest"]
+
   return (
     <>
       <div className={styles.ModalFilter}>
