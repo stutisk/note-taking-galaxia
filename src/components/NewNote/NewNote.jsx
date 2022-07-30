@@ -2,13 +2,17 @@ import React from "react";
 import styles from "../Notes/Notes.module.css";
 import { useRef } from "react";
 import axios from "axios";
-import { BsPin, VscSymbolColor } from "../Icons";
 import { useNotes } from "../../Context/NotesContext";
 import { useModal } from "../../Context/ModalContext";
+import { useEffect } from "react";
+
+import { Link } from "react-router-dom";
 const NewNote = () => {
   const notesInput = useRef();
-
-  const { setNotes, notes } = useNotes();
+  const selectlabels = useRef();
+  const selectPriority = useRef();
+  const inputColor = useRef();
+  const { setNotes, notes, labels } = useNotes();
   const { selectedNote, isModal, setIsModal } = useModal();
   const clearInput = () => (notesInput.current.value = "");
 
@@ -21,6 +25,16 @@ const NewNote = () => {
             {
               note: {
                 content: notesInput.current.value,
+                tags: selectlabels.current.value,
+                createdAt: new Date().toLocaleTimeString([], {
+                  year: "numeric",
+                  month: "numeric",
+                  day: "numeric",
+                  hour: "2-digit",
+                  minute: "2-digit",
+                }),
+                priority: selectPriority.current.value,
+                color: inputColor.current.value,
               },
             },
             {
@@ -36,9 +50,8 @@ const NewNote = () => {
       })();
     }
   };
- 
+
   const updateNote = () => {
-   
     (async () => {
       try {
         const response = await axios.post(
@@ -47,6 +60,9 @@ const NewNote = () => {
             note: {
               ...selectedNote,
               content: notesInput.current.value,
+              priority: selectPriority.current.value,
+              color: inputColor.current.value,
+              tags: selectlabels.current.value,
             },
           },
           {
@@ -56,27 +72,47 @@ const NewNote = () => {
         console.log();
         setNotes(response.data.notes.reverse());
         setIsModal(false);
-       
       } catch (error) {
         console.log(error);
       }
     })();
-  
   };
- 
+
+  useEffect(() => {
+    isModal ? (notesInput.current.value = selectedNote.content) : <></>;
+  });
 
   return (
     <div>
-      
       {isModal ? (
-
         <div className={styles.modal}>
           <div className={styles.note}>
-           
+            <div className="flex-column-end">
+              <select className=" icon-color pointer m-R1  " ref={selectlabels}>
+                {labels.map((item) => {
+                  return <option>{item}</option>;
+                })}
+              </select>
+              <select
+                className=" icon-color pointer m-R1  "
+                ref={selectPriority}
+              >
+                <option value="low">low</option>
+                <option value="Medium">Medium</option>
+                <option value="High">High</option>
+              </select>
+
+              <input
+                type="color"
+                name="card-color"
+                id="card-color"
+                className="pointer"
+                ref={inputColor}
+              />
+            </div>
             <textarea
               className={styles.textarea}
               type="text"
-              // placeholder="Start writing..."
               rows="500"
               column="500"
               ref={notesInput}
@@ -92,21 +128,47 @@ const NewNote = () => {
         </div>
       ) : (
         <div>
-
           <div className={styles.note}>
-          <h3 className="empty-state">Notes-{notes.length}</h3>
+            <h3 className="empty-state">Notes-{notes.length}</h3>
             <div className="flex-column-end">
-              <VscSymbolColor size={23} className=" icon-color  pointer" />
-              <BsPin size={25} className=" icon-color pointer" />
+              {labels.length > 0 ? (
+                <select
+                  className=" icon-color pointer m-R1  "
+                  ref={selectlabels}
+                >
+                  {labels.map((item) => {
+                    return <option>{item}</option>;
+                  })}
+                </select>
+              ) : (
+                <Link to="/label" className={` icon-color pointer m-R1  ${styles.routelink}`}>
+               Add  Labels
+                </Link>
+              )}
+              <select
+                className=" icon-color pointer m-R1  "
+                ref={selectPriority}
+              >
+                <option value="low">low</option>
+                <option value="Medium">Medium</option>
+                <option value="High">High</option>
+              </select>
+
+              <input
+                type="color"
+                name="card-color"
+                id="card-color"
+                className="pointer"
+                ref={inputColor}
+              />
             </div>
             <textarea
-              className={styles.textarea}
+              className={`${styles.textarea}  `}
               type="text"
               placeholder="Start writing..."
               rows="500"
               column="500"
               ref={notesInput}
-              // value={myRef.current.value}
             />
 
             <div className="flex-column-end ">

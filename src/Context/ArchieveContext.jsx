@@ -37,7 +37,7 @@ const ArchieveProvider = ({ children }) => {
           }
         );
 
-        setArchieveNote(res.data.archives);
+        setArchieveNote(res.data.archives.reverse());
         setNotes(res.data.notes);
       } catch (error) {
         console.log(error);

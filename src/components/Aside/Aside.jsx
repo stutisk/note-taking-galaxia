@@ -1,7 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import styles from "./Aside.module.css";
-import {BsArchive, BsTrash,MdOutlineLabel,VscHome , CgProfile } from "../Icons"
+import {BsArchive, BsTrash,MdOutlineLabel,VscHome } from "../Icons"
 
 const Aside = () => {
   return (
@@ -24,10 +24,7 @@ const Aside = () => {
           <BsTrash size={23} className="icon-color m-R" />
           Trash
         </Link>
-        <Link to="/profile" className={` padding ${styles.routelink}`}>
-          <CgProfile size={23} className="icon-color m-R" />
-          Profile
-        </Link>
+      
       </div>  
     </div>
     </>

@@ -8,6 +8,7 @@ import { NotesProvider } from "../src/Context/NotesContext";
 import { AuthProvider } from "../src/Context/AuthContext";
 import { ArchieveProvider } from "./Context/ArchieveContext";
 import { ModalProvider } from "./Context/ModalContext";
+import { TrashProvider } from "./Context/TrashContext";
 
 makeServer();
 
@@ -18,7 +19,9 @@ ReactDOM.render(
         <AuthProvider>
           <ArchieveProvider>
             <ModalProvider>
-            <App />
+              <TrashProvider>
+                <App />
+              </TrashProvider>
             </ModalProvider>
           </ArchieveProvider>
         </AuthProvider>

@@ -2,8 +2,10 @@ import React from "react";
 import { Link } from "react-router-dom";
 // import styles from "../pages/Home/Home.module.css";
 import styles from "./Mainnav.module.css";
+import {MdOutlineLogout} from "../Icons"
 
 const Mainnav = () => {
+  // var user = JSON.parse(localStorage.getItem("user"));
   return (
     <>
       <div className="container m-a">
@@ -23,19 +25,11 @@ const Mainnav = () => {
                    />
             </form>
           </div>
-          <button className={styles.btn}>
-        <Link className={styles.btn} to="./MainPage">
-          New note
-        </Link>
-      </button>
+         
+      {/* <div className=" checkout-header m-1t">Hola, {user.name} 🙋‍♀️</div> */}
       <div className={styles.profiledetails}>
-            <Link to="profile">
-              <img
-                src="https://picsum.photos/id/1027/80/120"
-                alt="Avatar "
-                class="avatar size-large"
-              />
-            </Link>
+      
+            <MdOutlineLogout size={35} className=" icon-color  pointer"/>
           </div>
         </nav>
       </div>

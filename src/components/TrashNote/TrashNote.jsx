@@ -1,10 +1,11 @@
 import React from "react";
 import styles from "../Notes/Notes.module.css";
-import { BsTrash, BsPin, RiInboxUnarchiveLine } from "../Icons";
-import { useArchieve } from "../../Context/ArchieveContext";
+import { BsTrash, BsPin, RiDeleteBin2Line} from "../Icons";
+// import { useArchieve } from "../../Context/ArchieveContext";
+import { useTrash } from "../../Context/TrashContext";
 
-const ArchieveNotes = ({ note }) => {
-  const { retoreFromArchieve, deleteFromArchieve } = useArchieve();
+const TrashNote = ({ note }) => {
+ const {RestoreTrashHandler,deleteFromTrash} = useTrash();
   return (
     <>
       <div
@@ -20,12 +21,12 @@ const ArchieveNotes = ({ note }) => {
         <div className="m-1">{note.content}</div>
         <div className="flex-column-end">
           <BsTrash
-            onClick={() => deleteFromArchieve(note)}
+            onClick={() => deleteFromTrash(note)}
             size={24}
             className=" icon-color pointer "
           />
-          <RiInboxUnarchiveLine
-            onClick={() => retoreFromArchieve(note)}
+          <RiDeleteBin2Line
+            onClick={() => RestoreTrashHandler(note)}
             size={24}
             className=" icon-color pointer "
           />
@@ -34,4 +35,4 @@ const ArchieveNotes = ({ note }) => {
     </>
   );
 };
-export { ArchieveNotes };
+export { TrashNote };
