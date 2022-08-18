@@ -9,9 +9,7 @@ const Mainnav = () => {
   const [show, setShow] = useState(false);
   var user = JSON.parse(localStorage.getItem("user"));
 
-  const Logout = () => {
-    localStorage.removeItem(user)
-  }
+  
   return (
     <>
       <div className="container m-a">
