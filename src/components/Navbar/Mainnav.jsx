@@ -2,13 +2,16 @@ import React from "react";
 import { Link } from "react-router-dom";
 // import styles from "../pages/Home/Home.module.css";
 import styles from "./Mainnav.module.css";
-import { MdOutlineLogout } from "../Icons";
 import { FilterModal } from "../FilterModal/FilterModal";
 import { useState } from "react";
 
 const Mainnav = () => {
   const [show, setShow] = useState(false);
   var user = JSON.parse(localStorage.getItem("user"));
+
+  const Logout = () => {
+    localStorage.removeItem(user)
+  }
   return (
     <>
       <div className="container m-a">
@@ -22,6 +25,7 @@ const Mainnav = () => {
           <div className={styles.searchbar}>
             <div className=" checkout-header m-1t">Hola, {user.name} 🙋‍♀️</div>
           </div>
+          
           <button
             onClick={() => setShow((prev) => !prev)}
             className={styles.btn}
@@ -32,9 +36,7 @@ const Mainnav = () => {
           </button>
           {show && <FilterModal />}
 
-          <div className={styles.profiledetails}>
-            <MdOutlineLogout size={35} className=" icon-color  pointer" />
-          </div>
+         
         </nav>
       </div>
     </>
